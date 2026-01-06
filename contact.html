@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | The Cozy Vibes Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #2b1d14;
+      --brown: #5a3e2b;
+      --cream: #f5efe6;
+      --accent: #c89b63;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(43, 29, 20, 0.95);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      height: 55vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+      url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    /* CONTACT */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .contact-info {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .contact-info h3 {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    .contact-info p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .contact-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .contact-form h3 {
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    form textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    form button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #b58952;
+    }
+
+    /* MAP */
+    .map {
+      margin-top: 50px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f140e;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Cozy Vibes Cafe</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-wrapper">
+
+    <div class="contact-info">
+      <h3>Visit Our Café</h3>
+      <p><strong>Address:</strong> 123 Brew Street, Coffee Town</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+      <p><strong>Email:</strong> hello@cozyvibes.com</p>
+      <p><strong>Hours:</strong> Mon – Sun | 9 AM – 10 PM</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send a Message</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="map">
+    <iframe
+      src="https://www.google.com/maps?q=coffee%20shop&t=&z=13&ie=UTF8&iwloc=&output=embed">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  © 2026 The Cozy Vibes Cafe | Contact Page
+</footer>
+
+<script>
+  // Simple form submission alert (demo purpose)
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Thank you for contacting us! We'll get back to you soon ☕");
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
+

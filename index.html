@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cozy Vibes Cafe| Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #2b1d14;
+      --brown: #5a3e2b;
+      --cream: #f5efe6;
+      --accent: #c89b63;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: var(--cream); color: var(--dark); scroll-behavior: smooth; }
+
+    /* Navbar */
+    header {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(43, 29, 20, 0.95);
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 15px 40px; z-index: 1000;
+    }
+    header h1 { color: #fff; font-size: 22px; letter-spacing: 1px; }
+    nav a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 14px; }
+    nav a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+                  url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      color: #fff; padding-top: 80px;
+    }
+    .hero h2 { font-size: 48px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; margin-bottom: 20px; }
+    .hero a { background: var(--accent); color: #fff; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; }
+    .hero a:hover { background: #b58952; }
+
+    /* Sections */
+    section { padding: 80px 10%; }
+    h2.section-title { font-size: 36px; margin-bottom: 40px; border-left: 5px solid var(--accent); padding-left: 15px; }
+
+    /* About */
+    .about { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+    .about img { flex: 1; max-width: 500px; border-radius: 15px; }
+    .about div { flex: 1; }
+    .about div p { font-size: 16px; line-height: 1.6; margin-bottom: 15px; }
+
+    /* Featured Menu */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .menu-item {
+      background: #fff; padding: 25px; border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .menu-item:hover { transform: translateY(-8px); }
+    .menu-item h4 { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px; }
+    .menu-item p { font-size: 14px; color: #555; }
+    .price { color: var(--accent); font-weight: 600; }
+
+    /* Contact teaser */
+    .contact-teaser { background: var(--brown); color: #fff; text-align: center; padding: 50px 30px; border-radius: 15px; }
+    .contact-teaser a { display: inline-block; margin-top: 15px; background: var(--accent); padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; color: #fff; }
+    .contact-teaser a:hover { background: #b58952; }
+
+    /* Footer */
+    footer { background: #1f140e; color: #aaa; text-align: center; padding: 20px; font-size: 14px; }
+
+    @media(max-width: 768px) {
+      .hero h2 { font-size: 32px; }
+      .about { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Cozy Vibes Cafe</h1>
+  <nav>
+     <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div>
+    <h2>Welcome to The Cozy Vibes Cafe</h2>
+    <p>Crafting the finest coffee and cozy moments</p>
+    <a href="#menu">Explore Menu</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+  <div class="about">
+    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Cafe Interior">
+    <div>
+      <p>At The Cozy Vibes Cafe, we believe in serving more than just coffee. Our café is a cozy space where friends gather, ideas spark, and every cup tells a story. We focus on high-quality ingredients and freshly brewed beverages.</p>
+      <p>Whether it's a morning espresso or an afternoon latte, we aim to provide a warm experience in every sip. Come, relax, and enjoy our handcrafted drinks and freshly baked treats.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Menu -->
+<section id="menu">
+  <h2 class="section-title">Featured Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-item">
+      <h4>Espresso <span class="price">$3.50</span></h4>
+      <p>Strong, bold, and freshly brewed espresso.</p>
+    </div>
+    <div class="menu-item">
+      <h4>Cappuccino <span class="price">$4.50</span></h4>
+      <p>Espresso with steamed milk foam and a rich taste.</p>
+    </div>
+    <div class="menu-item">
+      <h4>Caramel Latte <span class="price">$5.00</span></h4>
+      <p>Smooth latte with sweet caramel flavor.</p>
+    </div>
+    <div class="menu-item">
+      <h4>Chocolate Muffin <span class="price">$3.25</span></h4>
+      <p>Freshly baked muffin with rich chocolate chunks.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Teaser -->
+<section id="contact" class="contact-teaser">
+  <h2>Get in Touch</h2>
+  <p>Have questions or want to book a table? Reach out to us today!</p>
+  <a href="#">Contact Us</a>
+</section>
+
+<footer>
+  © 2026 The Cozy Vibes Cafe | Crafted with passion
+</footer>
+
+<script>
+  // Simple fade-in for menu items
+  const items = document.querySelectorAll('.menu-item');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => {
+    item.style.opacity = 0;
+    item.style.transform = 'translateY(40px)';
+    item.style.transition = '0.7s ease';
+    observer.observe(item);
+  });
+</script>
+
+</body>
+</html>

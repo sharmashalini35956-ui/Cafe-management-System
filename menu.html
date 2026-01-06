@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu | The Cozy Vibes Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark: #2b1d14;
+      --brown: #5a3e2b;
+      --cream: #f5efe6;
+      --accent: #c89b63;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--dark);
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(43, 29, 20, 0.95);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+      url("https://images.unsplash.com/photo-1509042239860-f550ce710b93") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding-top: 80px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    /* MENU */
+    .menu-category {
+      margin-bottom: 60px;
+    }
+
+    .menu-category h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .menu-item {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-8px);
+    }
+
+    .menu-item h4 {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .price {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .menu-item p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f140e;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>The Cozy Vibes Cafe</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h2>Our Menu</h2>
+    <p>Handcrafted drinks & freshly made bites</p>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+
+  <!-- COFFEE -->
+  <div class="menu-category">
+    <h3>Signature Coffee</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h4>Classic Espresso <span class="price">$3.50</span></h4>
+        <p>Strong, bold and perfectly balanced.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Cappuccino <span class="price">$4.50</span></h4>
+        <p>Rich espresso with steamed milk foam.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Caramel Latte <span class="price">$5.00</span></h4>
+        <p>Smooth latte with caramel sweetness.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Cold Brew <span class="price">$4.75</span></h4>
+        <p>Slow brewed, chilled, and refreshing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NON-COFFEE -->
+  <div class="menu-category">
+    <h3>Non-Coffee Beverages</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h4>Hot Chocolate <span class="price">$4.00</span></h4>
+        <p>Rich cocoa with steamed milk.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Matcha Latte <span class="price">$4.75</span></h4>
+        <p>Smooth, earthy, and energizing.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Iced Lemon Tea <span class="price">$3.50</span></h4>
+        <p>Light, fresh, and refreshing.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOD -->
+  <div class="menu-category">
+    <h3>Baked Goods & Snacks</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h4>Chocolate Muffin <span class="price">$3.25</span></h4>
+        <p>Freshly baked with rich chocolate.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Butter Croissant <span class="price">$3.00</span></h4>
+        <p>Flaky, buttery, and oven fresh.</p>
+      </div>
+      <div class="menu-item">
+        <h4>Grilled Sandwich <span class="price">$5.50</span></h4>
+        <p>Cheese, herbs, and toasted perfection.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 The Cozy Vibes Cafe | Inspired by tavern-style café culture
+</footer>
+
+<script>
+  // Fade-in animation on scroll
+  const items = document.querySelectorAll('.menu-item');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.2 });
+
+  items.forEach(item => {
+    item.style.opacity = 0;
+    item.style.transform = 'translateY(40px)';
+    item.style.transition = '0.7s ease';
+    observer.observe(item);
+  });
+</script>
+
+</body>
+</html>
